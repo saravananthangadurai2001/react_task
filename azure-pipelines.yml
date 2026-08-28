@@ -15,17 +15,4 @@ stages:
     jobs:
       - job: 'JunitTest'
         displayName: 'Running Unit Tests'
-        steps:
-          - script: echo 'Running Spring demo app unit test'
-          - task: Maven@4
-            inputs:
-              azureSubscription: 'Azure subscription 1(ddc21003-9cc5-4a8c-bbdf-29b18f10d8b9)'
-              mavenPomFile: 'pom.xml'
-              publishJUnitResults: true
-              testResultsFiles: '**/surefire-reports/TEST-*.xml'
-              javaHomeOption: 'JDKVersion'
-              mavenVersionOption: 'Default'
-              mavenAuthenticateFeed: false
-              effectivePomSkip: false
-              sonarQubeRunAnalysis: false
-              checkStyleRunAnalysis: true
+       
